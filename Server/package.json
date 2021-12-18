@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "start nodemon index.js && start lt --port 3000"
+    "start": "nodemon ./index.js"
   },
   "author": "",
   "license": "ISC",

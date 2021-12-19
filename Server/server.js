@@ -15,17 +15,13 @@ var transporter = nodemailer.createTransport({
 
 
 var ticketNum = 0;
-
-
-
-
-var participants = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+var participants = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
 var voters = {};
 
 app.get("/", function (req, res) {
     //console.log(req.query);
     var pid = req.query.id;
-    if (pid < 1 || pid > 12) {
+    if (pid < 1 || pid > 14) {
         return;
     }
 

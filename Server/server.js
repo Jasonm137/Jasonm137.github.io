@@ -15,6 +15,10 @@ var transporter = nodemailer.createTransport({
 
 
 var ticketNum = 0;
+
+
+
+
 var participants = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
 var voters = {};
 
@@ -45,7 +49,7 @@ app.get("/ticket", function (req, res) {
         from: 'jasonma20060626@gmail.com',
         to: req.query.email + ', jasonma20060626@gmail.com',
         subject: 'Impact Initiative 50/50 Ticket',
-        text: '' + ticketNum++
+        text: 'Your 50/50 Ticket is: ' + ticketNum++
     };
 
     transporter.sendMail(mailOptions, function (error, info) {
